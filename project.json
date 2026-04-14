@@ -1,0 +1,22 @@
+{
+  "overview": "Professional crypto screener dashboard for Indodax traders. Real-time market data with sortable pair tables, price charts, order book, and recent trades — all powered by the Indodax public API.",
+  "features": [
+    "Live market overview table with all Indodax trading pairs",
+    "Search and sort by price, change %, and volume",
+    "Coin detail view with 24h price chart",
+    "Order book with buy/sell depth levels",
+    "Recent trades list per pair",
+    "Auto-refresh every 30 seconds",
+    "Mobile-responsive professional design"
+  ],
+  "category": "finance",
+  "tags": [
+    "crypto",
+    "trading",
+    "indodax",
+    "screener",
+    "market-data",
+    "dashboard"
+  ],
+  "last_updated": "2026-04-13T11:09:32.516Z"
+}

@@ -1,0 +1,56 @@
+type http_request_result = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type http_header = 
+ record {
+   name: text;
+   value: text;
+ };
+type TransformationOutput = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type TransformationInput = 
+ record {
+   context: blob;
+   response: http_request_result;
+ };
+type TradesResult = 
+ variant {
+   err: text;
+   ok: text;
+ };
+type TickerAllResult = 
+ variant {
+   err: text;
+   ok: text;
+ };
+type PairsResult = 
+ variant {
+   err: text;
+   ok: text;
+ };
+type MarketSummariesResult = 
+ variant {
+   err: text;
+   ok: text;
+ };
+type DepthResult = 
+ variant {
+   err: text;
+   ok: text;
+ };
+service : {
+  getDepth: (pairId: text) -> (DepthResult);
+  getMarketSummaries: () -> (MarketSummariesResult);
+  getPairs: () -> (PairsResult);
+  getTickerAll: () -> (TickerAllResult);
+  getTrades: (pairId: text) -> (TradesResult);
+  /// Transform callback required by the IC HTTP outcalls mechanism.
+  transform: (input: TransformationInput) -> (TransformationOutput) query;
+}
