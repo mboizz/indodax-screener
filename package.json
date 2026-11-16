@@ -1,19 +1,10 @@
 {
-  "name": "@caffeine/template-app",
+  "name": "indodax-screener",
+  "private": true,
   "type": "module",
-  "engines": {
-    "node": ">=16.0.0",
-    "pnpm": ">=7.0.0",
-    "npm": "please use pnpm"
-  },
+  "description": "Screener pasar Indodax (IDR): situs statis + Netlify Functions proxy ber-cache",
   "scripts": {
-    "build": "pnpm -r --if-present run build",
-    "typecheck": "pnpm -r --if-present run typecheck",
-    "check": "pnpm -r --if-present run check",
-    "fix": "pnpm -r --if-present run fix",
-    "bindgen": "caffeine-bindgen --did-file ./src/backend/dist/backend.did --out-dir ./src/frontend/src --actor-interface-file --force"
+    "test": "node --test test/*.test.mjs"
   },
-  "devDependencies": {
-    "sharp": "^0.34.4"
-  }
+  "engines": { "node": ">=20" }
 }

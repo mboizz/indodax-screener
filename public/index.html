@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indodax Screener</title>
+<meta name="description" content="Screener pasar Indodax (IDR): harga, perubahan 24 jam dan 7 hari, likuiditas, spread, sinyal momentum, candlestick dengan EMA dan RSI, order book, watchlist, dan peringatan harga.">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/JetBrainsMono.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/app.css">
+<script type="module" src="/js/app.mjs"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/" aria-label="Indodax Screener, ke halaman pasar">
+    <span class="logo" aria-hidden="true">IX</span>
+    <span><b>INDODAX SCREENER</b><small>PASAR IDR · DATA PUBLIK INDODAX</small></span>
+  </a>
+  <div class="status" aria-live="polite">
+    <span><span id="dot" class="dot"></span><span id="state">MEMUAT</span></span>
+    <span class="t" id="updated"></span>
+    <button class="btn" id="auto" type="button" aria-pressed="true" title="Muat ulang otomatis tiap 30 detik">AUTO 30D</button>
+    <button class="btn" id="refresh" type="button" aria-label="Muat ulang data">
+      <svg class="ico" id="rico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+      <span class="h-md">REFRESH</span>
+    </button>
+  </div>
+</header>
+<main id="app" tabindex="-1"><p class="empty">Memuat data pasar…</p></main>
+<footer>
+  <span>Data: <a href="https://indodax.com" rel="noopener noreferrer" target="_blank">API publik Indodax</a> · cache ±20 detik · bukan rekomendasi investasi</span>
+  <span>Kode: <a href="https://github.com/mboizz/indodax-screener" rel="noopener noreferrer" target="_blank">github.com/mboizz/indodax-screener</a></span>
+</footer>
+<div class="toasts" id="toasts" aria-live="assertive"></div>
+<noscript><p class="empty">Aplikasi ini memerlukan JavaScript.</p></noscript>
+</body>
+</html>
